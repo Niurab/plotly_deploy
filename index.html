@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="static/css/style.css" />
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+          <div class="well" id="otu">
+            <h4>OTU defined</h4>
+            <p>
+
+             <br>
+             An Operational Taxonomic Unit (OTU) is an operational definition used to classify groups of closely related individuals. The term was originally introduced in 1963 by Robert R. Sokal and Peter H. A. Sneath in the context of numerical taxonomy, where an "Operational Taxonomic Unit" is simply the group of organisms currently being studied.
+            </p>
+            <p>Source and link to the full article:
+              <a href="https://en.wikipedia.org/wiki/Operational_taxonomic_unit">Wikipedia</a>.
+            </p>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+          <div class="well" id="scrub">
+            <h4>Which bacteria hang out in belly buttons? Here’s a who’s who</h4>
+            <p>
+              PITTSBURGH, Pa. — For Kathleen Schmidt, 18, the biggest challenge in her research was finding people willing to swab their belly buttons. Her tiny town of Ashley, N.D., has only 600 residents — and most weren’t too willing to bare their bellies for science.
+            </p>
+            <p>Source and link to the full article:
+              <a href="https://www.sciencenewsforstudents.org/blog/eureka-lab/which-bacteria-hang-out-belly-buttons-heres-whos-who">Sciencenewsforstudents</a>.
+            </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+    <div class="row"></div>
+      <div class="col-md-12">
+        <div class="well" id='know'>
+          <h4>The Importance of Bacterial Culture to Food Microbiology in the Age of Genomics</h4>
+          <p>
+            Culture-based and genomics methods provide different insights into the nature and behavior of bacteria. Maximizing the usefulness of both approaches requires recognizing their limitations and employing them appropriately. Genomic analysis excels at identifying bacteria and establishing the relatedness of isolates. Culture-based methods remain necessary for detection and enumeration, to determine viability, and to validate phenotype predictions made on the bias of genomic analysis. The purpose of this short paper is to discuss the application of culture-based analysis and genomics to the questions food microbiologists routinely need to ask regarding bacteria to ensure the safety of food and its economic production and distribution. To address these issues appropriate tools are required for the detection and enumeration of specific bacterial populations and the characterization of isolates for, identification, phylogenetics, and phenotype prediction.   
+          </p>
+          <p>Source and link to the full article:
+            <a href="https://www.frontiersin.org/articles/10.3389/fmicb.2017.00777/full">Frontiers in Microbiology</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+
+</body>
+
+</html>
